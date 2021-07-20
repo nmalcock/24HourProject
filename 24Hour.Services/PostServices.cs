@@ -12,7 +12,7 @@ namespace _24Hour.Services
     {
         private readonly Guid _authorId;
 
-        public PostServices (Guid authorId)
+        public PostServices(Guid authorId)
         {
             _authorId = authorId;
         }
@@ -38,8 +38,8 @@ namespace _24Hour.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = 
-                    ctx 
+                var query =
+                    ctx
                         .Posts
                         .Where(else=> e.AuthorId == _authorId)
                         .Select(
@@ -54,5 +54,5 @@ namespace _24Hour.Services
                 return query.ToArray();
             }
         }
-    }s
+    }
 }
