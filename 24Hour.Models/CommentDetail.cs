@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace _24Hour.Models
 {
-    class CommentDetail
+    public class CommentDetail
     {
         [ForeignKey(nameof(Post))]
         public int PostId { get; set; }
         public virtual Post Post { get; set; }
+        public string Text { get; set; }
     }
 }

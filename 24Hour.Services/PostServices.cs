@@ -41,12 +41,12 @@ namespace _24Hour.Services
                 var query = 
                     ctx 
                         .Posts
-                        .Where(else=> e.AuthorId == _authorId)
+                        .Where (e=> e.AuthorId == _authorId)
                         .Select(
                                 e =>
                                 new PostListItems
                                 {
-                                    PostId = e.Id,
+                                    Id = e.Id,
                                     Title = e.Title,
                                     Text = e.Text
                                 }
@@ -54,5 +54,5 @@ namespace _24Hour.Services
                 return query.ToArray();
             }
         }
-    }s
+    }
 }
