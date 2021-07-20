@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _24Hour.Models
 {
-    class ReplyDetail
+    public class ReplyDetail
     {
         [ForeignKey(nameof(Comment))]
         public int CommentId { get; set; }
