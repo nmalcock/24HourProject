@@ -1,23 +1,16 @@
-﻿using System;
+﻿using _24Hour.Data;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _24Hour.Data
+namespace _24Hour.Models
 {
-    public class Comment
+    class CommentCreate
     {
-        [Key]
-        public int Id { get; set; }
-        [Required]
         public string Text { get; set; }
-        [Required]
-        public Guid AuthorId { get; set; }
-
-        public virtual List<Reply> replies { get; set; } = new List<Reply>();
 
         [ForeignKey(nameof(Post))]
         public int PostId { get; set; }
