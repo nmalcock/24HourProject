@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _24Hour.Models
 {
-    class NoteCreate
+    public class PostCreate
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters")]
