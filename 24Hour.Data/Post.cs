@@ -18,6 +18,6 @@ namespace _24Hour.Data
         [Required]
         public Guid AuthorId { get; set; }
 
-        //public virtual List<Comment> Comments { get; set; } = new List<Comment>();
+        public virtual List<Comment> Comments { get; set; } = new List<Comment>();
     }
 }
