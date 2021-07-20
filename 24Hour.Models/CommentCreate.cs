@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace _24Hour.Models
 {
-    class CommentCreate
+    public class CommentCreate
     {
         public string Text { get; set; }
 
